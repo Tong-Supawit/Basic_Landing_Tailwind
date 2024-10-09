@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class=" h-[100vh] bg-gradient-to-r from-blue-400 to-purple-300 opacity-80">
+    <nav class="p-3 h-[6vh] sticky top-0">
+        <div class="flex">
+            <div class="w-[8vw]">
+                <ul>
+                    <li>
+                        <button onclick="toggleDropdown()">
+                            <img src="../img/align-left-svgrepo-com.svg" class="w-6 h-6" alt="">
+                        </button>
+                        <div id="sidebar" class="hidden mt-4 w-[15vw] h-[90vh] border-grey-100 rounded-r-4xl shadow-md text-xl">
+                            <p class="mt-16 hover:text-white">Dashboard Overview</p>
+                            <p class="mt-16 hover:text-white">User Management</p>
+                            <p class="mt-16 hover:text-white">Content Management</p>
+                            <p class="mt-16 hover:text-white">E-commerce</p>
+                            <p class="mt-16 hover:text-white">Project Management</p>
+                            <p class="mt-16 hover:text-white">Settings</p>
+                            <p class="mt-16 hover:text-white">Support & Help</p>
+                            <p class="mt-16 hover:text-white">Learning Resources</p>
+                            <p class="mt-16 hover:text-white">Menu 1</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mr-1 w-[92vw] text-black text-2xl">
+                <ul class="flex justify-between">
+                    <li class="hover:text-white">
+                        <a href="">Home Page</a>
+                    </li>
+                    <li class="hover:text-white">
+                        <a href="">About Me</a>
+                    </li>
+                    <li class="hover:text-white">
+                        <a href="">Register</a>
+                    </li>
+                    <li class="hover:text-white">
+                        <a href="">Sign In</a>
+                    </li>
+                    <li class="group">
+                        <button onclick="toggleDropdown()" class="hover:text-white">
+                            Dashboard<img src="../img/arrow-drop-down-svgrepo-com.svg" class="inline w-6 h-6" alt="">
+                        </button>
+                        <div class="hidden group-hover:block mt-5  text-lg text-black">
+                            <ul>
+                                <li class="p-2 hover:text-white">
+                                    <a href="">My Account</a>
+                                </li>
+                                <li class="p-2 hover:text-white">
+                                    <a href="">Setting</a>
+                                </li>
+                                <li class="p-2 hover:text-white">
+                                    <a href="">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="w-[100vw] h-[90vh] flex justify-center items-center">
+        <div class="w-[30vw] h-[45vh] flex justify-center items-center rounded-3xl shadow-xl bg-gradient-to-r from-blue-300 to-purple-300 text-xl">
+            <form action="">
+                <p class="mb-5">Username :</p>
+                <input type="text" placeholder=" Username" class="mb-5 p-2 rounded-md">
+                <p class="mb-5">Password :</p>
+                <input type="text" placeholder=" Password" class="p-2 rounded-md">
+                <br><br>
+                <div class="flex justify-around">
+                    <button type="submit" class="p-4 hover:text-white">Login</button>
+                    <button type="reset" class="p-4 hover:text-white">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        toggleDropdown = () => {
+            const dropdown = document.getElementById("sidebar");
+            dropdown.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
